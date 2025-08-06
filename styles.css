@@ -1,12 +1,18 @@
 body {
     font-family: Arial, sans-serif;
-    background: #fefefe;
+    background:linear-gradient(to right, #a1c4fd , #c2e9fb);
+    /*background: linear-gradient(to right, #fceabb, #f8b500);*/
     text-align: center;
     padding: 30px;
   }
   
   h1 {
     color: #333;
+    font-size: 70px;
+  }
+
+  p {
+    font-weight: bold;
   }
   
   .pet {
