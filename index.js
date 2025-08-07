@@ -70,7 +70,7 @@ class Pet {
   
     // Loop through actions and show them
     for (let i = 0; i < actions.length; i++) {
-      actionBox.innerHTML += `✅ ${actions[i]}<br>`;
+      actionBox.innerHTML += `🦴 ${actions[i]}<br>`;
     }
   }
   
