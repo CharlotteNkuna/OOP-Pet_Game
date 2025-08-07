@@ -30,9 +30,9 @@ class Pet {
   // ____________________________________
   function choosePet(type) {
     if (type === 'dog') {
-      currentPet = new Pet('Dog', 'Woof! 🐶', 'https://images.pexels.com/photos/2664417/pexels-photo-2664417.jpeg');
+      currentPet = new Pet('Dog', 'You have petted the dog! 🐶', 'https://images.pexels.com/photos/2664417/pexels-photo-2664417.jpeg');
     } else {
-      currentPet = new Pet('Cat', 'Meow! 🐱', 'https://images.pexels.com/photos/3030635/pexels-photo-3030635.jpeg');
+      currentPet = new Pet('Cat', 'You have petted the cat! 🐱', 'https://images.pexels.com/photos/3030635/pexels-photo-3030635.jpeg');
     }
   
     document.getElementById('petImage').src = currentPet.image;
