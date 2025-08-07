@@ -1,23 +1,24 @@
 body {
     font-family: Arial, sans-serif;
-    background:linear-gradient(to right, #a1c4fd , #c2e9fb);
-    /*background: linear-gradient(to right, #fceabb, #f8b500);*/
+    /*background:linear-gradient(to right, #a1c4fd , #c2e9fb); */
+    background: linear-gradient(to right, #fceabb, #f8b500);
     text-align: center;
     padding: 30px;
   }
   
   h1 {
-    color: #333;
+    color: #5c4033;
     font-size: 70px;
   }
 
   p {
     font-weight: bold;
+    color: #372f2c;
   }
   
   .pet {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 310px;
     margin: 20px auto;
     cursor: pointer;
     border-radius: 20px;
@@ -32,6 +33,8 @@ body {
   #counter {
     font-size: 20px;
     margin-top: 10px;
+    color: #372f2c;
+
   }
   
   button {
@@ -39,10 +42,15 @@ body {
     font-size: 16px;
     margin: 10px;
     cursor: pointer;
+    font-weight: bold;
+    color: #372f2c;
+
   }
   
   #actions {
     margin-top: 20px;
+    color: #5c4033;
+
   }
   
   

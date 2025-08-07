@@ -31,8 +31,15 @@ class Pet {
   function choosePet(type) {
     if (type === 'dog') {
       currentPet = new Pet('Dog', 'You have petted the dog! 🐶', 'https://images.pexels.com/photos/2664417/pexels-photo-2664417.jpeg');
-    } else {
+    
+    } else if (type === 'cat') {
       currentPet = new Pet('Cat', 'You have petted the cat! 🐱', 'https://images.pexels.com/photos/3030635/pexels-photo-3030635.jpeg');
+    
+    } else if (type === 'ballPython') {
+        currentPet = new Pet('Ball python', 'You have gently touched the python! 🐍', 'https://images.pexels.com/photos/34426/snake-rainbow-boa-reptile-scale.jpg');
+    
+    } else if (type === 'parrot') {
+        currentPet = new Pet('parrot', 'You have played with the parrot! 🦜', 'https://images.pexels.com/photos/56733/pexels-photo-56733.jpeg');
     }
   
     document.getElementById('petImage').src = currentPet.image;
@@ -60,17 +67,33 @@ class Pet {
   // ____________________________________
   //     Function + Loop: Fun pet actions
   // ____________________________________
+  
   function showFunActions(petName) {
-    const actions = petName === 'Dog'
-      ? ['Bark', 'Wag Tail', 'Fetch Ball']
-      : ['Meow', 'Purr', 'Chase Mouse'];
+    let actions = [];
+      if (petName === 'Dog') {
+        actions = ['Bark', 'Wag Tail', 'Fetch Ball'];
+      
+      } else if (petName === 'Cat') {
+        actions = ['Meow', 'Purr', 'Chase Mouse'];
+      
+      } else if (petName === 'Ball python') {
+        actions = ['Ssss', 'Wrap around arm', 'Stick out tongue'];
+      
+    } else if (petName === 'parrot') {
+        actions = ['Squak', 'Mimic words', 'Flies'];
+      }
+  
+  //function showFunActions(petName) {
+    //const actions = petName === 'Dog'
+     // ? ['Bark', 'Wag Tail', 'Fetch Ball']
+      //: ['Meow', 'Purr', 'Chase Mouse']
   
     const actionBox = document.getElementById('actions');
     actionBox.innerHTML = '<strong>Fun Actions:</strong><br>';
   
     // Loop through actions and show them
     for (let i = 0; i < actions.length; i++) {
-      actionBox.innerHTML += `🦴 ${actions[i]}<br>`;
+      actionBox.innerHTML += `✅ ${actions[i]}<br>`;
     }
   }
   
