@@ -3,19 +3,23 @@
 // ____________________________________
 
 class Pet {
-    constructor(name, sound, image) {
+    constructor(name, soundText, image, soundUrl) {
       this.name = name;
-      this.sound = sound;
+      this.soundText = soundText;
       this.image = image;
+      this.soundUrl = new Audio(soundUrl)
       this.playCount = 0;
     }
   
     speak() {
-      alert(this.sound);
+      alert(this.soundText);
+      this.soundUrl.currentTime = 0;
+      this.soundUrl.play();
     }
   
     play() {
       this.playCount++;
+      this.soundUrl.load;
       this.speak();
       updateCounter(this.playCount);
       showFunActions(this.name);
@@ -30,16 +34,20 @@ class Pet {
   // ____________________________________
   function choosePet(type) {
     if (type === 'dog') {
-      currentPet = new Pet('Dog', 'You have petted the dog! 🐶', 'https://images.pexels.com/photos/2664417/pexels-photo-2664417.jpeg');
+      currentPet = new Pet('Dog', 'You have petted the dog! 🐶', 'https://images.pexels.com/photos/2664417/pexels-photo-2664417.jpeg',
+        'media/big-dog-barking-300504.mp3');
     
     } else if (type === 'cat') {
-      currentPet = new Pet('Cat', 'You have petted the cat! 🐱', 'https://images.pexels.com/photos/3030635/pexels-photo-3030635.jpeg');
+      currentPet = new Pet('Cat', 'You have petted the cat! 🐱', 'https://images.pexels.com/photos/3030635/pexels-photo-3030635.jpeg', 
+        'media/cat-meow-sound-383823.mp3');
     
     } else if (type === 'ballPython') {
-        currentPet = new Pet('Ball python', 'You have gently touched the python! 🐍', 'https://images.pexels.com/photos/34426/snake-rainbow-boa-reptile-scale.jpg');
+        currentPet = new Pet('Ball python', 'You have gently touched the python! 🐍', 'https://images.pexels.com/photos/34426/snake-rainbow-boa-reptile-scale.jpg', 
+          'media/snake-hiss-95241.mp3');
     
     } else if (type === 'parrot') {
-        currentPet = new Pet('parrot', 'You have played with the parrot! 🦜', 'https://images.pexels.com/photos/56733/pexels-photo-56733.jpeg');
+        currentPet = new Pet('parrot', 'You have played with the parrot! 🦜', 'https://images.pexels.com/photos/56733/pexels-photo-56733.jpeg', 
+          'media/parrots-88486.mp3');
     }
   
     document.getElementById('petImage').src = currentPet.image;
