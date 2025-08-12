@@ -85,7 +85,7 @@ class Pet {
         actions = ['Meow', 'Purr', 'Chase Mouse'];
       
       } else if (petName === 'Ball python') {
-        actions = ['Ssss', 'Wrap around arm', 'Stick out tongue'];
+        actions = ['Hiss', 'Wrap around arm', 'Stick out tongue'];
       
     } else if (petName === 'parrot') {
         actions = ['Squak', 'Mimic words', 'Flies'];
