@@ -1,7 +1,7 @@
 .navbar {
   margin: -38px;
-  padding:  12px;
-  background-color: #a6785d;
+  padding:  10px;
+  background-color: #845f4a;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -39,7 +39,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #fceabb, #f8b500);
+    background: linear-gradient(to right, #e0cc9b, #be8c01);
     text-align: center;
     padding: 30px;
   }
