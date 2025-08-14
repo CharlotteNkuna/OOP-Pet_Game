@@ -7,21 +7,21 @@ class Pet {
       this.name = name;
       this.soundText = soundText;
       this.image = image;
-      this.soundUrl = new Audio(soundUrl) //from the library // its encapsulation: covering sound tyrack/properties  its abstraction: we dont know where it comes from
-      this.playCount = 0; //counter variable
+      this.soundUrl = new Audio(soundUrl) 
+      this.playCount = 0; 
     }
   
     speak() {
-      alert(this.soundText); //alert box
-      this.soundUrl.currentTime = 0; // ensures restart on each click. cant stop/pause
+      alert(this.soundText); 
+      this.soundUrl.currentTime = 0; 
       this.soundUrl.play();
     }
   
     play() {
-      this.playCount++; //increament from 0 to1
-      this.soundUrl.load; //makes sure that the sound can start without delay
-      this.speak(); // we are looping back to speak function, to make the sound keep playing
-      updateCounter(this.playCount); //got mapped with count
+      this.playCount++; 
+      this.soundUrl.load; 
+      this.speak(); 
+      updateCounter(this.playCount); 
       showFunActions(this.name);
     }
   }
@@ -50,7 +50,7 @@ class Pet {
           'media/parrots-88486.mp3');
     }
   
-    document.getElementById('petImage').src = currentPet.image; //also mapping to html
+    document.getElementById('petImage').src = currentPet.image; 
     document.getElementById('game').style.display = 'block';
     updateCounter(0);
     showFunActions(currentPet.name);
@@ -68,7 +68,7 @@ class Pet {
   // ____________________________________
   //     Function to update the counter
   // ____________________________________
-  function updateCounter(count) { //count is mapping, marges the counter variable with the parametrers so that it keeps playing over n over
+  function updateCounter(count) { 
     document.getElementById('counter').innerText = `Times played: ${count}`;
   }
   
@@ -91,12 +91,7 @@ class Pet {
         actions = ['Squak', 'Mimic words', 'Flies'];
       }
   
-  //function showFunActions(petName) {
-    //const actions = petName === 'Dog'
-     // ? ['Bark', 'Wag Tail', 'Fetch Ball']
-      //: ['Meow', 'Purr', 'Chase Mouse']
-  
-    const actionBox = document.getElementById('actions');  //to load properties
+    const actionBox = document.getElementById('actions'); 
     actionBox.innerHTML = '<strong>Fun Actions:</strong><br>';
   
     // Loop through actions and show them
