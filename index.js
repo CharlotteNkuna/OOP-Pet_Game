@@ -19,7 +19,7 @@ class Pet {
   
     play() {
       this.playCount++; //increament from 0 to1
-      this.soundUrl.load; //makes sure that the sound can start without 
+      this.soundUrl.load; //makes sure that the sound can start without delay
       this.speak(); // we are looping back to speak function, to make the sound keep playing
       updateCounter(this.playCount); //got mapped with count
       showFunActions(this.name);
